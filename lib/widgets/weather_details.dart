@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import '../controller/main_controller.dart';
-import 'app_colors.dart';
-import 'circular_icon.dart';
+import '../constants/app_colors.dart';
+import '../constants/circular_icon.dart';
 
 class WeatherDetail extends StatelessWidget {
   final double height;

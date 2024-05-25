@@ -4,11 +4,12 @@ import 'package:flutter/material.dart';
 double calculateRiskPercentage(double T, double P, double W) {
   double temperatureRisk = 0.3 * (T + 10) / 50;
   //manipulated
-  double precipitationRisk = 0.2 * (P < 1 ? P+1 : P);
+  double precipitationRisk = 0.2 * (P < 1 ? P : 1);
   double windSpeedRisk = 0.5 * W / 50;
 
   double totalRisk = temperatureRisk + precipitationRisk + windSpeedRisk;
-  double riskPercentage = totalRisk * 100;
+  double riskPercentage = (totalRisk * 100)/2;
+  riskPercentage = double.parse(riskPercentage.toStringAsFixed(2));
 
   return riskPercentage;
 }

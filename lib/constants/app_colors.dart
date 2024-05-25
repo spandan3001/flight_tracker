@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+//colors
 class AppColors{
   static const cardColor = Color(0xFFFEFEFE);
   static const darkCardColor = Color(0xFFECEFF5);

@@ -1,6 +1,6 @@
-import 'package:flight_tracker/constants/weather_details.dart';
+import 'package:flight_tracker/widgets/weather_details.dart';
 import 'package:flutter/material.dart';
-import '../constants/flight_details.dart';
+import 'flight_details.dart';
 import 'dart:math' show pi;
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 class DetailCard extends StatefulWidget {

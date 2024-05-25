@@ -5,7 +5,6 @@ import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:latlong2/latlong.dart';
 import '../api/api.dart';
-import '../constants/app_colors.dart';
 import '../constants/circle_marker.dart';
 import '../dummy_data.dart';
 import '../widgets/airplane_icon.dart';
@@ -167,5 +166,90 @@ class MainController extends GetxController {
         stats.value.temp, stats.value.precipitation, stats.value.wind)));
 
     resultForStats.refresh();
+
+    //uncomment to start animation
+    animateFlightPath();
+  }
+
+
+  void animateFlightPath() async{
+    for(int i=1;i<flightData.path.length;i++) {
+      await Future.delayed(const Duration(milliseconds: 300));
+
+
+      stats.value = Stats(
+          startCityCode: startController.text,
+          endCityCode: endController.text,
+          temp: flightData.weather[i].temperature2m,
+          wind: flightData.weather[i].windSpeed10m,
+          precipitation: flightData.weather[i].precipitation,
+          startTime: DateTime.now());
+      resultForStats.clear();
+
+      resultForStats.addAll(getWeatherCondition(calculateRiskPercentage(
+          stats.value.temp, stats.value.precipitation, stats.value.wind)));
+
+      resultForStats.refresh();
+
+      cameraLL(flightData.path.first);
+
+      travelled.clear();
+      toTravel.clear();
+      markers.clear();
+
+      travelled.add(
+        Polyline(
+          points: flightData.path.sublist(0, i),
+          color: Colors.black12,
+          strokeWidth: 3,
+          isDotted: true
+        ),
+      );
+
+      toTravel.add(
+        Polyline(
+          points: flightData.path.sublist(i),
+          color: Colors.orange,
+          strokeWidth: 3,
+        ),
+      );
+
+      markers.addAll(
+        [
+          Marker(
+            point: flightData.path[i],
+            width: 30,
+            height: 30,
+            child: AirplaneWidget(
+              start: flightData.path[i - 1],
+              end: flightData.path[i],
+            ),
+          ),
+          Marker(
+            point: flightData.path.first,
+            width: 25,
+            height: 25,
+            child: CustomPaint(
+              size: const Size(300, 300), // Specify the size of the canvas
+              painter: ConcentricCirclesPainter(),
+            ),
+          ),
+          Marker(
+            point: flightData.path.last, // London, United Kingdom
+            width: 25,
+            height: 25,
+            child: CustomPaint(
+              size: const Size(300, 300), // Specify the size of the canvas
+              painter: ConcentricCirclesPainter(
+                  isSingle: true, innerColor: Colors.black),
+            ),
+          ),
+        ],
+      );
+
+      travelled.refresh();
+      toTravel.refresh();
+      markers.refresh();
+    }
   }
 }
