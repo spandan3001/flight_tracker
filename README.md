@@ -1,6 +1,17 @@
-# Flight Tracker
+<h1 align="center">Flight Tracker</h1>
 
-Flight Tracker is a Flutter application that allows users to track flights in real-time on a map. This app uses `flutter_map` for map functionalities and other dependencies to enhance the app's capabilities.
+<p align="center">
+  <img alt="Flutter" src="https://img.shields.io/badge/Flutter-v2.5-blue.svg">
+  <img alt="Dart" src="https://img.shields.io/badge/Dart-v2.14.4-green.svg">
+</p>
+
+<p align="center">
+  <strong>Flight Tracker is a Flutter application that allows users to track flights in real-time on a map. This app uses `flutter_map` for map functionalities and other dependencies to enhance the app's capabilities and it's built with Flutter so compatible on all platforms!</strong>
+</p>
+
+<p align="center">
+  <img src="" alt="Demo of Flight Tracker" width="300">
+</p>
 
 ## Features
 
