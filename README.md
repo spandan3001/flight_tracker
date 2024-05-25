@@ -35,7 +35,8 @@ dependencies:
 ## Tech Stack
 
 - **Frontend:** Flutter/Dart
-- **Backend:** [github](https://github.com/spandan3001](https://github.com/Ravi1359/Astar-Flight-pathfinding))
+- **Backend(python):** [github](https://github.com/Ravi1359/Astar-Flight-pathfinding)
+- **Backend(java):** [github](https://github.com/Ravi1359/FlightPath-Backend)
 - **State Management:** Getx State Management
 - **UI Framework:** Material Design
 
