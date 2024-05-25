@@ -1,16 +1,30 @@
-# flight_tracker
+# Flight Tracker
 
-A new Flutter project.
+Flight Tracker is a Flutter application that allows users to track flights in real-time on a map. This app uses `flutter_map` for map functionalities and other dependencies to enhance the app's capabilities.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Real-time flight tracking
+- Interactive map using `flutter_map`
+- Responsive UI with `flutter_screenutil`
+- State management with `get`
+- HTTP requests with `http`
+- Dependency injection with `get_it`
+- Date and time formatting with `intl`
 
-A few resources to get you started if this is your first Flutter project:
+## Dependencies
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+This project uses the following dependencies:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_map: ^6.1.0
+  flutter_screenutil: ^5.9.1
+  get: ^4.6.6
+  latlong2: ^0.9.1
+  http: ^1.2.1
+  get_it: ^7.7.0
+  intl: ^0.19.0
+```
