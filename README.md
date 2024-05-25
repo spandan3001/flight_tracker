@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <iframe src="https://giphy.com/embed/jlj6l7veRMC7kJPuT2" width="222" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/jlj6l7veRMC7kJPuT2"></a></p>
+   <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHA5Y2szNnpsMzZ2a3E2dDQwYXRzNjg5OHY0eTZkMXFidzdydjg1eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jlj6l7veRMC7kJPuT2/giphy.gif" alt="Demo of Flight Tracker" width="300">
 </p>
 
 ## Features
